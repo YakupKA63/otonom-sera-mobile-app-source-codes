@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white2">#80FFFFFF</color>
+    <color name="white3">#D4FFFFFF</color>
+    <color name="blue">#00138A</color>
+    <color name="main_background">#545454</color>
+    <color name="view_background">#6D6D6D</color>
+    <color name="edit_text_background">@color/notication_bar_color</color>
+    <color name="purple">#6815FF</color>
+    <color name="light_green">#00FF0D</color>
+    <color name="green">#2BC534</color>
+    <color name="brown">#942300</color>
+    <color name="red">#FF0000</color>
+    <color name="settings_elements_back">#7A7A7A</color>
+    <color name="device_list_background">#979797</color>
+    <color name="title_background">#03A9F4</color>
+    <color name="notication_bar_color">#0089BF</color>
+    <color name="transparent_white">#CFC7C7C7</color>
+    <color name="viewa_background">#BABABA</color>
+    <color name="gray">#e0e0e0</color>
+    <color name="hacker_green">#003C00</color>
+    <color name="main_purple">#501EA8</color>
+    <color name="test_yellow">#FFAE00</color>
+    <color name="controller_green">#20D529</color>
+    <color name="info_brown">#872C09</color>
+    <color name="hacker_red">#CC1515</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorSource">#40AAD0</color>
+    <color name="light_yellow">#FFD500</color>
+    <color name="delight_yellow">#C7A400</color>
+    <color name="red_pastel">#E00909</color>
+    <color name="green_pastel">#15991E</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+
+
+</resources>

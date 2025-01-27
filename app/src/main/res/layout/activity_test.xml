@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".TestActivity">
+
+    <View
+        android:id="@+id/testTitle_view"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@color/title_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/testTitle_textView"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
+        android:text="@string/testTitle_textView_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/testLabel_textView"
+        style="@style/Widget.Material3.MaterialTimePicker.Display.HelperText"
+        android:layout_width="375dp"
+        android:layout_height="550dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_background"
+        android:padding="15dp"
+        android:text="@string/testLabel_textView_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testTitle_view"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <Button
+        android:id="@+id/startTest_button"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_button_for_starting_test"
+        android:text="@string/startTest_button_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testLabel_textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

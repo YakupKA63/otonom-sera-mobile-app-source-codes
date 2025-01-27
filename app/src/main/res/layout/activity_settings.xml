@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".SettingsActivity">
+
+
+    <View
+        android:id="@+id/settingsTitle_view"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@color/title_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/settingsTitle_textView"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/settingsTitle_textView_text"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/settingsTitle_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mainSettings_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTitle_view"
+        app:layout_constraintVertical_bias="0.1">
+
+        <LinearLayout
+            android:id="@+id/bluetoothState_linearLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bluetoothState_textView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="100dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:text="@string/bluetoothState_textView_text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+
+            <Switch
+                android:id="@+id/bluetoothState_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:clickable="false"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_3"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/hacker_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hackerState_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hackerState_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:gravity="center"
+                        android:textAlignment="textStart"
+                        android:text="@string/hackerState_textView_text"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
+
+                    <Switch
+                        android:id="@+id/hackerState_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:checked="true"
+                        android:thumb="@drawable/switch_thumb"
+                        android:track="@drawable/switch_track"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/passwordView_linearLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_view_background"
+                    android:gravity="center"
+                    android:elevation="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/nameInput_editText"
+                        android:layout_width="300dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableLeft="@drawable/ic_account"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="@string/nameInput_editText_text"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/passwordInput_editText"
+                        android:layout_width="300dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableStart="@drawable/ic_password"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:hint="@string/passwordInput_editText_text"
+                        android:inputType="textPassword"
+                        android:maxLength="20"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3" />
+
+                    <ImageButton
+                        android:id="@+id/donePassword_button"
+                        android:layout_width="100dp"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_list_elements_background"
+                        app:srcCompat="@drawable/ic_done" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controllerDatas_linearLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/controllerDatas_textView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/controllerDatas_textView_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/controllerDataView_linearLayout"
+                android:layout_width="350dp"
+                android:layout_height="265dp"
+                android:background="@drawable/rounded_view_background"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/upButtonData_editText"
+                        android:layout_width="150dp"
+                        android:layout_height="65dp"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableLeft="@drawable/up_icon"
+                        android:ems="10"
+                        android:hint="@string/upButtonData_editText_text"
+                        android:inputType="text"
+                        android:maxLength="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/downButtonData_editText"
+                        android:layout_width="150dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableLeft="@drawable/down_icon"
+                        android:ems="10"
+                        android:hint="@string/downButtonData_editText_text"
+                        android:inputType="text"
+                        android:maxLength="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/leftButtonData_editText"
+                        android:layout_width="150dp"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableLeft="@drawable/left_icon"
+                        android:ems="10"
+                        android:hint="@string/leftButtonData_editText_text"
+                        android:inputType="text"
+                        android:maxLength="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/rightButtonData_editText"
+                        android:layout_width="150dp"
+                        android:layout_height="65dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:autoSizeTextType="uniform"
+                        android:background="@drawable/rounded_list_elements_background"
+                        android:drawableLeft="@drawable/right_icon"
+                        android:ems="10"
+                        android:hint="@string/rightButtonData_editText_text"
+                        android:inputType="text"
+                        android:maxLength="1"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/doneControllerDatas_button"
+                    android:layout_width="100dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_list_elements_background"
+                    app:srcCompat="@drawable/ic_done" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutUs_linearLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/aboutUs_textView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/aboutUs_textView_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

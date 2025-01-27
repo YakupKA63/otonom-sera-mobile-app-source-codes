@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:clickable="false"
+    tools:context=".ControllerActivity">
+
+
+    <View
+        android:id="@+id/controllerTitle_view"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@color/title_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/controllerTitle_textView"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/controllerTitle_textView_text"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/controllerTitle_view"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/rightButton_imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="128dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_controller_button_white"
+        android:clickable="false"
+        app:layout_constraintStart_toStartOf="@+id/upButton_imageView"
+        app:layout_constraintTop_toTopOf="@+id/upButton_imageView"
+        app:srcCompat="@drawable/ic_right_button" />
+
+    <ImageView
+        android:id="@+id/leftButton_imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="100dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_controller_button_white"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/upButton_imageView"
+        app:layout_constraintTop_toTopOf="@+id/upButton_imageView"
+        app:srcCompat="@drawable/ic_left_button" />
+
+    <ImageView
+        android:id="@+id/upButton_imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="50dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_controller_button_white"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controllerLabel_textView"
+        app:layout_constraintVertical_bias="0.005"
+        app:srcCompat="@drawable/ic_up_button" />
+
+    <ImageView
+        android:id="@+id/downButton_imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="130dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_controller_button_white"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upButton_imageView"
+        app:srcCompat="@drawable/ic_down_button" />
+
+    <TextView
+        android:id="@+id/controllerLabel_textView"
+        android:layout_width="305dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/controllerLabel_textView_text0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controllerSwitcher_linearLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/controllerSwitcher_linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controllerTitle_view"
+        app:layout_constraintVertical_bias="0.03">
+
+        <TextView
+            android:id="@+id/controllerSwitcher_textView"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@string/controllerTitle_textView_text"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/controllerSwitcher_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:clickable="false"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

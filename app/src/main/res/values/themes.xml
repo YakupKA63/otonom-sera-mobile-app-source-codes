@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SeyyarSeraApp1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/title_background</item>
+        <item name="colorPrimaryDark">@color/notication_bar_color</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/notication_bar_color</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="Theme.SeyyarSeraApp1" parent="Base.Theme.SeyyarSeraApp1" />
+
+
+
+
+</resources>

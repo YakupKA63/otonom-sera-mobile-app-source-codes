@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".InformationAboutUsActivity">
+
+    <Button
+        android:id="@+id/mail_button"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="32dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_button_for_test"
+        android:drawableLeft="@drawable/gmail_logo"
+        android:elevation="-10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/mail_button_text"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/members_linearLayout" />
+
+    <Button
+        android:id="@+id/web_button"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/rounded_button_for_test"
+        android:drawableLeft="@drawable/website_logo"
+        android:elevation="-10dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/web_button_text"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mail_button" />
+
+    <View
+        android:id="@+id/aboutUsTitle_view"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="@color/title_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aboutUsTitle_textView"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="@string/aboutUs_textView_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/members_linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rounded_background_for_device_lists"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutUsTitle_view"
+        app:layout_constraintVertical_bias="0.05">
+
+        <TextView
+            android:id="@+id/members_textView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:text="@string/members_textView_text"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ykp_textView1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/device_list_corners"
+            android:text="Yakup KÜÇÜKASLAN"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/brk_textView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:autoSizeTextType="uniform"
+            android:text="Burak Arda KOÇ"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/abdlk_textView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/device_list_corners"
+            android:text="Abdulkadir Subaşı"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mhmtal_textView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:autoSizeTextType="uniform"
+            android:padding="2dp"
+            android:text="Mehmet Ali KAHVECİBAŞI"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/mhmtarn_textView"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/device_list_corners"
+            android:text="Mahmut Arin KARAKAŞ"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/appDeveloper_textView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:autoSizeTextType="uniform"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="@string/appDeveloper_textView_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ykp_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/device_list_corners"
+            android:text="Yakup KÜÇÜKASLAN"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
