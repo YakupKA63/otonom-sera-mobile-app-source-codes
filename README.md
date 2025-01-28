@@ -10,3 +10,5 @@
 
 
 Web Sitemiz: https://otonomsera.my.canva.site
+
+#### ÖNEMLİ: Bu uygulama yalnızca Android 7 ve üzerini destekler, eğer cihazınızın Android sürümü 7'den düşükse uygulama cihazınıza yüklenmeyecektir.
