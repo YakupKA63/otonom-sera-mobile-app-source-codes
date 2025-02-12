@@ -62,7 +62,7 @@
     <string name="bluettothOpened_toast">Bluetooth Açıldı!</string>
     <string name="bluettothClosed_toast">Bluetooth Kapatıldı!</string>
     <string name="testStarted_toast">Test Başlatıldı!</string>
-    <string name="language_listView_text" translatable="false">Dili Değiştir</string>
+    <string name="battery_percent_textView_text" translatable="false">Batarya Yüzdesi</string>
     <string name="ar_textView_text" translatable="false">Arapça</string>
     <string name="bn_textView_text" translatable="false">Bengladeşçe</string>
     <string name="en_textView_text" translatable="false">İngilizce</string>

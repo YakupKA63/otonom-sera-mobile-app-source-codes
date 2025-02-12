@@ -26,6 +26,7 @@ class InfoActivity : AppCompatActivity() {
     lateinit var soil_hum: String
     lateinit var ldr1: String
     lateinit var ldr2: String
+    lateinit var battery: String
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +51,7 @@ class InfoActivity : AppCompatActivity() {
 //                        soil_hum = words.getOrNull(2).toString()
 //                        ldr1 = words.getOrNull(3).toString()
 //                        ldr2 = words.getOrNull(4).toString()
+//                        battery = words.getOrNull(5).toString()
 
                         // UI güncelleme işlemi main thread üzerinde yapılmalı
                         runOnUiThread {
@@ -58,6 +60,7 @@ class InfoActivity : AppCompatActivity() {
                             binding.soilMastureData.text = soil_hum
                             binding.LDR1Data.text = ldr1
                             binding.LDR2Data.text = ldr2
+                            binding.batteryPercentData.text = "%$battery"
                         }
                     }
                     delay(1000) // 1 saniye bekle, sürekli okuma yapma

@@ -235,6 +235,45 @@
                 android:textAlignment="center"
                 android:textColor="@color/main_background" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/battery_percent_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_marginTop="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/battery_percent_textView"
+                android:layout_width="210dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:text="@string/battery_percent_textView_text"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/battery_percent_data"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/text_view_background"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/main_background" />
+        </LinearLayout>
     </LinearLayout>
 
 

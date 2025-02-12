@@ -91,6 +91,7 @@ class ControllerActivity : AppCompatActivity() {
         binding.controllerSwitcherSwitch.setOnClickListener {
             checkBluetoothConnections(this)
             if (BTopened == true) {
+                sendData("~",outputStream)
                 binding.controllerSwitcherSwitch.thumbDrawable = getDrawable(R.drawable.switch_thumb)
                 binding.controllerSwitcherSwitch.trackDrawable = getDrawable(R.drawable.switch_track)
                 binding.controllerSwitcherSwitch.isClickable = true
@@ -124,6 +125,7 @@ class ControllerActivity : AppCompatActivity() {
 
                 }
             } else {
+                sendData("~~",outputStream)
                 binding.controllerSwitcherSwitch.isChecked = false
                 binding.controllerSwitcherSwitch.isClickable = false
                 binding.upButtonImageView.animate().alpha(0.5F).setDuration(500)
@@ -162,6 +164,7 @@ class ControllerActivity : AppCompatActivity() {
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                         // Dokunma bırakıldığında buton arka planını eski haline getirelim
+                        sendData(" ",outputStream)
                         binding.downButtonImageView.setBackgroundResource(R.drawable.rounded_controller_button_white)
                     }
                 }
@@ -189,6 +192,7 @@ class ControllerActivity : AppCompatActivity() {
                     }
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                        sendData(" ",outputStream)
                         binding.upButtonImageView.setBackgroundResource(R.drawable.rounded_controller_button_white)
 
                     }
@@ -219,6 +223,7 @@ class ControllerActivity : AppCompatActivity() {
                     }
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                        sendData(" ",outputStream)
                         binding.leftButtonImageView.setBackgroundResource(R.drawable.rounded_controller_button_white)
 
                     }
@@ -247,7 +252,7 @@ class ControllerActivity : AppCompatActivity() {
 
                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                         binding.rightButtonImageView.setBackgroundResource(R.drawable.rounded_controller_button_white)
-
+                        sendData(" ",outputStream)
                     }
                 }
             }
