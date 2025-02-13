@@ -4,10 +4,8 @@ import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.yakupka.seyyarseraapp1.SocketManager.bluetoothSocket
@@ -27,6 +25,7 @@ class InfoActivity : AppCompatActivity() {
     lateinit var ldr1: String
     lateinit var ldr2: String
     lateinit var battery: String
+    lateinit var rain: String
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +33,8 @@ class InfoActivity : AppCompatActivity() {
         binding = ActivityInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.navigationBarColor = ContextCompat.getColor(this, com.yakupka.seyyarseraapp1.R.color.black)
+        window.navigationBarColor =
+            ContextCompat.getColor(this, com.yakupka.seyyarseraapp1.R.color.black)
 
         checkBluetoothConnections(this)
 
@@ -46,12 +46,13 @@ class InfoActivity : AppCompatActivity() {
                     if (data != null) {
                         // Veriyi doğru şekilde ayırıp UI'yi güncelliyoruz
                         val words = data.split(" ")  // Burada "," ayırıcı kullanılıyor
-                        air_temp = words.getOrNull(1).toString()
-                        air_hum = words.getOrNull(3).toString()
-//                        soil_hum = words.getOrNull(2).toString()
-//                        ldr1 = words.getOrNull(3).toString()
-//                        ldr2 = words.getOrNull(4).toString()
-//                        battery = words.getOrNull(5).toString()
+                        air_temp = words.getOrNull(0).toString()
+                        air_hum = words.getOrNull(1).toString()
+                        soil_hum = words.getOrNull(2).toString()
+                        rain = words.getOrNull(3).toString()
+                        ldr1 = words.getOrNull(4).toString()
+                        ldr2 = words.getOrNull(5).toString()
+                        battery = words.getOrNull(6).toString()
 
                         // UI güncelleme işlemi main thread üzerinde yapılmalı
                         runOnUiThread {
@@ -67,7 +68,11 @@ class InfoActivity : AppCompatActivity() {
                 }
             }
         } else {
-            Toast.makeText(this, getString(R.string.noConnectedDevices_toast_toast), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(R.string.noConnectedDevices_toast_toast),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
@@ -90,7 +95,11 @@ class InfoActivity : AppCompatActivity() {
         val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
 
         if (bluetoothAdapter == null) {
-            Toast.makeText(context, getString(R.string.unsupportedBluetooth_toast), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                getString(R.string.unsupportedBluetooth_toast),
+                Toast.LENGTH_SHORT
+            ).show()
             return
         } else if (!bluetoothAdapter.isEnabled) {
             Toast.makeText(context, getString(R.string.closedBT_toast), Toast.LENGTH_SHORT).show()
@@ -105,7 +114,7 @@ class InfoActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        intent = Intent(applicationContext,MainActivity::class.java)
+        intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
         finish()
         super.onBackPressed()
