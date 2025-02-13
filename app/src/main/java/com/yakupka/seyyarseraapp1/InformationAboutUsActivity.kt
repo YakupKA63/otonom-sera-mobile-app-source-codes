@@ -61,7 +61,8 @@ class InformationAboutUsActivity : AppCompatActivity() {
                 MediaPlayer.create(this, R.raw.click) // raw klasörüne eklediğin dosyanın adı
             mediaPlayer.isLooping = false
             mediaPlayer.start()
-            intent = Intent(applicationContext, MainActivity::class.java)
+            val url = "https://otonomsera.my.canva.site"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
         }
 
